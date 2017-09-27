@@ -1,3 +1,6 @@
-Empty p5 sketch.
+Tobin Long, 51
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
+["Hello
+World!"](https://stuffnthingz.github.io/120-work/hw-3/)
+
+# HW-3 RESPONSE
