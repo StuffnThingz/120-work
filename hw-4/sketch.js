@@ -86,6 +86,12 @@ function draw() {
   strokeWeight(75);
   point(-100, -150);
 
+  // fingers
+  //ellipse(0, 0, 10, 10);
+  strokeWeight(15);
+  line(-100, -180, -120, -215);
+  line(-100, -180, -80, -215);
+
   pop();
 
   push();
@@ -107,9 +113,9 @@ function draw() {
 
   pop();
 
-  // ** END ARMS **
+  // ** END ARMS ** //
 
-  // ** HEAD **
+  // ** HEAD ** //
 
   push();
 
@@ -122,16 +128,49 @@ function draw() {
 
   noFill();
   strokeWeight(6);
-  //line(50, -50, -50, -50);
   arc(0, 50, 90, 50, 0, 180);
 
+  // ** NOSE
 
+  strokeWeight(5);
+  line(0, -15, -20, 20);
+  line(0, 20, -20, 20);
 
+  // ** EYES
+
+  // right eye
+
+  strokeWeight(15);
+  point(-30, -15);
+
+  // left eye
+
+  strokeWeight(15);
+  point(30, -15);
+
+  // ** EARS
+
+  // right ear
+
+  strokeWeight(1);
+  fill('rgb(255,224,189)');
+  ellipse(-112, 0, 25, 40);
+
+  // left ear
+
+  strokeWeight(1);
+  fill('rgb(255,224,189)');
+  ellipse(112, 0, 25, 40);
+
+  // ** HAIR
+
+  fill('rgb(29, 241, 11)');
+  arc(0, -30, 200, 175, 180, 180);
+
+  // ** HEAD END ** //
 
   pop();
 
   pop();
-
-
 
 }
