@@ -1,6 +1,6 @@
 // Silly Robot setup
 
-let angle = 0;
+var angle = 0;
 
 function setup() {
     createCanvas( 1500, 700 );
@@ -188,9 +188,19 @@ function draw() {
     //*****************
     // End Robot Sandbox
     //*****************
+
+    // ** Counter **
      resetMatrix();
+     textSize( 20 );
+     noStroke();
+     fill( 'black' );
      translate( windowWidth/2, windowHeight/2 );
+     text( "'mouseX':" + floor( mouseX ), -65, -10 );
+     text( "'mouseY':" + floor( mouseY ), -65, 20 );
+     noFill();
+     stroke( 5 );
      rect( -75, -37.5, 150, 75 );
+
 
 
 
