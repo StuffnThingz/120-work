@@ -1,3 +1,5 @@
 Tobin Long, 50
 
-Please replace contents of this file with appropriate readme information after finishing your p5 sketch.
+[Sketch]https://stuffnthingz.github.io/120-work/hw-5/
+
+# HW-5 RESPONSE
