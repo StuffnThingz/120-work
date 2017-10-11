@@ -201,9 +201,4 @@ function draw() {
      stroke( 5 );
      rect( -75, -37.5, 150, 75 );
 
-
-
-
-
-
   }
