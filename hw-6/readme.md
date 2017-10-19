@@ -2,7 +2,7 @@ Tobin Long, 50
 
 [Sketch]https://stuffnthingz.github.io/120-work/hw-6/
 
-# HW-5 RESPONSE
+# HW-6 RESPONSE
 
 Wow, that was a lot to take in. The math is makeing me nervous for some reason.
 I guess I mostly had a hard time trying to come up with original ideas to use with
