@@ -1,5 +1,5 @@
 var ball = {};
-ball.width = 40;
+ball.width = 75;
 ball.x = 10;
 ball.y = 10;
 ball.delta_x = 1;
@@ -8,11 +8,11 @@ ball.scale_x = 1;
 ball.scale_y = 1;
 
 function setup() {
-    createCanvas(windowWidth, 400);
+    // change window height
+    createCanvas(windowWidth, windowHeight);
     background(255);
+
 }
-
-
 
 function draw() {
 
@@ -31,10 +31,10 @@ function draw() {
     ellipse(ball.x, ball.y, ball.width, ball.width);
 }
 
-function mousePressed() {
-    ball.scale_x = map(mouseX, 0, width, 0.5, 10);
-    ball.scale_y = map(mouseY, 0, height, 0.5, 10);
-}
+//function mousePressed() {
+  //  ball.scale_x = map(mouseX, 0, width, 0.5, 10);
+    //ball.scale_y = map(mouseY, 0, height, 0.5, 10);
+//}
 Result
 HTML
 JavaScript
