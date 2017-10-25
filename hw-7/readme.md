@@ -34,4 +34,4 @@ color theme.
 
 I then changed the mousePressed function so the min and max were 1 - 10. This seemed to increase the speed of the ball when clicked, also making the "spread" of the trail a bit.
 
-I used the if statement so when the ball goes past half the screen it turns to blue with a red stroke. I did the same thing for the y axis so it would turn to green with a red stroke if it went past half the height of the screen. I added a little transparancy because it looked cool.
+I used the if statement so when the ball goes past half the screen it turns to blue with a red stroke. I did the same thing for the y axis so it would turn to green with a red stroke if it went past half the height of the screen. I added a little transparancy because it looked cool. I tried experimenting with OR and AND, ElSE and ELSE IF, but couldn't come up with anything I liked. I'll keep working at that.

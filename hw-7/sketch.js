@@ -26,14 +26,14 @@ function draw() {
 
     ball.x += ball.delta_x * ball.scale_x;
     ball.y += ball.delta_y * ball.scale_y;
-
+    //ball changes directions when it gets to edge
     if (ball.x >= width || ball.x <= 0) {
         ball.delta_x = -1 * ball.delta_x;
     }
     if (ball.y >= height || ball.y <= 0) {
         ball.delta_y = -1 * ball.delta_y;
     }
-    //changing stroke and fill
+    //changing stroke and fill depending on location on ball
     stroke('#0066E8');
     fill(col.r, 0, 0, 80);
     if (ball.x > width/2) {
@@ -41,11 +41,11 @@ function draw() {
       stroke('rgb(255, 0, 0)');
     }
     if (ball.y > height/2) {
-      fill(0, col.g, 0, 80);
-      stroke('rgb(255, 0, 0)');
+    fill(0, col.g, 0, 80);
+    stroke('rgb(255, 0, 0)');
     }
-
     ellipse(ball.x, ball.y, ball.width, ball.width);
+
 }
 
 function mousePressed() {
