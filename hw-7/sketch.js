@@ -35,21 +35,25 @@ function draw() {
     }
     //changing stroke and fill
     stroke('#0066E8');
-    fill(col.r, 0, 0);
+    fill(col.r, 0, 0, 80);
     if (ball.x > width/2) {
-      fill(0, 0, col.b);
+      fill(0, 0, col.b, 80);
       stroke('rgb(255, 0, 0)');
-
     }
+    if (ball.y > height/2) {
+      fill(0, col.g, 0, 80);
+      stroke('rgb(255, 0, 0)');
+    }
+
     ellipse(ball.x, ball.y, ball.width, ball.width);
 }
 
 function mousePressed() {
     //changing what I think is the speed/ size of trail when clicked
     //seems like the "gaps" get bigger the faster is goes.
-    ball.scale_x = map(mouseX, 0, width, 1, 15);
-    ball.scale_y = map(mouseY, 0, height, 1, 15);
-    
+    ball.scale_x = map(mouseX, 0, width, 1, 20);
+    ball.scale_y = map(mouseY, 0, height, 1, 20);
+
 }
 Result
 HTML
