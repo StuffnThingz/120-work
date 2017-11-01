@@ -1,23 +1,20 @@
-var x = 0;
-var speed = 3;
+var x = 25;
+var y = 25;
 
 function setup() {
-  createCanvas(600, 400);
+	createCanvas(windowWidth, windowHeight);
 }
 
 function draw() {
-  background(0);
-  stroke(255);
-  strokeWeight(4);
-  noFill();
-  ellipse(x, 200, 100, 100);
+	background('rgb(217, 217, 217)');
 
-  if(x > width || x < 0) {
-    speed = speed * -1;
-  }
-    x = x + speed;
-}
+	translate(width/2, height/2);
+		ellipse(0, 0, x, y);
 
-function mousePressed() {
-  speed += 10;
+		if( x >= width) {
+			ellipse(0, 0, x, y);
+		}
+
+x += 3;
+y += 3;
 }
