@@ -9,7 +9,7 @@ function draw() {
 	strokeWeight(5);
 	stroke('#FF803A');
 	// make a 4x4 panel
-	for(line_x = 0; line_x <= width; line_x += width/2) {
+	//for(line_x = 0; line_x <= width; line_x += width/2) {
 		for(line_y = 0; line_y <= height; line_y += height/2) {
 			line(line_x, 0, line_x, width);
 			line(line_x, line_y, width, line_y);

@@ -1,20 +1,19 @@
-var x = 25;
-var y = 25;
+var words = ["stuff", "things", "junk"]
+
+var nums = [100, 25, 46, 72];
+
+var num = 23;
 
 function setup() {
-	createCanvas(windowWidth, windowHeight);
+	createCanvas(400, 400);
 }
 
 function draw() {
-	background('rgb(217, 217, 217)');
+	background(0);
 
-	translate(width/2, height/2);
-		ellipse(0, 0, x, y);
-
-		if( x >= width) {
-			ellipse(0, 0, x, y);
-		}
-
-x += 3;
-y += 3;
+	fill(255);
+	ellipse(100, 200, nums[2], nums[2]);
+	ellipse(200, 200, num, num);
+	textSize(32);
+	text(words[0], 12, 200)
 }

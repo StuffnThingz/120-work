@@ -55,6 +55,3 @@ function mousePressed() {
     ball.scale_y = map(mouseY, 0, height, 1, 20);
 
 }
-Result
-HTML
-JavaScript
