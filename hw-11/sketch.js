@@ -3,9 +3,17 @@ let arrows = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  //for (let i = 0; i < 20; i++) {
+    //let x = random(-50, 50 );
+  //arrows[i] = new Arrow(x, random(10, windowHeight - 10));
+//}
+}
+
+function mousePressed() {
+  // How do I get the 20 arrows to fire with mousePressed???
   for (let i = 0; i < 20; i++) {
-    let x = random(-50, 50 );
-  arrows[i] = new Arrow(x, random(10, windowHeight - 10));
+  let a = new Arrow(mouseX, mouseY);
+  arrows.push(a);
 }
 }
 
