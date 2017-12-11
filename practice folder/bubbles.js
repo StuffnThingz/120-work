@@ -2,11 +2,11 @@ class Ball {
   constructor() {
   this.x = random(0, windowWidth);
   this.y = random(0, windowHeight);
-  this.r = random(50, 100);
-  this.delta_x = 2;
-  this.delta_y = 2;
-  this.scale_x = 2;
-  this.scale_y = 2;
+  this.r = random(10, 75);
+  this.delta_x = random(2, -2);
+  this.delta_y = random(2, -2);
+  this.scale_x = random(2, -2);
+  this.scale_y = random(2, -2);
   this.col =('rgb(255, 32, 10)');
   }
 
