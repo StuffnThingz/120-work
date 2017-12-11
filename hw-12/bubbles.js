@@ -1,66 +1,32 @@
 class Ball {
-    constructor(x, y, size) {
-        this.color = 'red';
-        this.size = random(20, 80);
-        this.rad = this.size / 2;
-        this.posX = x;
-        this.posY = y;
-        this.deltaX = random(-5, 5);
-        this.deltaY = random(-5, 5);
+  constructor() {
+  this.x = random(0, windowWidth);
+  this.y = random(0, windowHeight);
+  this.r = random(10, 75);
+  this.delta_x = random(2, -2);
+  this.delta_y = random(2, -2);
+  this.scale_x = random(2, -2);
+  this.scale_y = random(2, -2);
+  this.col =('rgb(255, 32, 10)');
+  }
+
+  move() {
+    this.x += this.delta_x * this.scale_x;
+    this.y += this.delta_y * this.scale_y;
+
+    if (this.x >= width || this.x <= 0) {
+        this.delta_x = -1 * this.delta_x;
     }
+    if (this.y >= height || this.y <= 0) {
+        this.delta_y = -1 * this.delta_y;
 
-    display() {
-        push();
-        // remove the balls outer stroke
-        noStroke();
-        // set the balls fill color
-        fill(this.color);
-        // set the position of the ball
-        translate(this.posX, this.posY);
-        ellipse(0, 0, this.size);
-        pop();
-    }
+  }
+}
 
-    move() {
-        this.posX += this.deltaX;
-        this.posY += this.deltaY;
-    }
-
-    edgeCheck() {
-        // check if the ball has hit a vertical wall (left or right walls)
-        if (this.posX + this.rad >= width || this.posX - this.rad <= 0) {
-            this.deltaX *= -1;
-            this.color = 'rgb(110, 240, 158)';
-        }
-        // check if the ball has hit a horizontal wall (top or bottom walls)
-        if (this.posY + this.rad >= height || this.posY - this.rad <= 0) {
-            this.deltaY *= -1;
-            this.color = 'rgb(110, 240, 158)';
-        }
-    }
-
-
-    ballCheck(otherBalls, myId) {
-        // for loop touches each of the balls in the array
-        for (let n = 0; n < otherBalls.length; n++) {
-            // if n != myId, then check for touching
-            // otherwise, its ME and we need to skip
-            if (n != myId) {
-                let d = dist(this.posX, this.posY, otherBalls[n].posX, otherBalls[n].posY);
-                let combinedR = this.rad + otherBalls[n].rad;
-
-                if (d <= combinedR) {
-                    this.deltaX *= -1;
-                    this.deltaY *= -1;
-
-                    // flip the color
-                    if( this.color == 'rgb(237, 36, 232)') {
-                        this.color = 'rgb(16, 224, 231)';
-                    } else {
-                        this.color = 'rgb(237, 36, 232)';
-                    }
-                }
-            }
-        }
-    }
+  show() {
+    stroke('rgb(0, 0, 0)');
+    strokeWeight(3);
+    fill(this.col);
+    ellipse(this.x, this.y, this.r * 2);
+  }
 }
