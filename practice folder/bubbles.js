@@ -10,7 +10,7 @@ class Ball {
   this.col =('rgb(255, 32, 10)');
 
   this.intersects = function(other) {
-    var d = dist(this.x, this.y, other.x, other.y);
+    let d = dist(this.x, this.y, other.x, other.y);
     if (d < this.r + other.r) {
       return true;
     } else {
@@ -19,24 +19,16 @@ class Ball {
   }
 }
 
-   // this.intersects = function(other) {
-   //   var d = dist(this.x, this.y, other.x, other.y);
-   //   if (d < this.r + other.r) {
-   //     return true;
-   //   } else {
-   //     return false;
-   //   }
-   // }
 
   move() {
-    this.x += this.delta_x * this.scale_x;
-    this.y += this.delta_y * this.scale_y;
-
-    if (this.x >= width || this.x <= 0) {
-        this.delta_x = -1 * this.delta_x;
+    this.x += this.delta_x;
+    this.y += this.delta_y;
+    if (this.x + this.r >= width || this.x - this.r <= 0) {
+        this.delta_x *= -1;
     }
-    if (this.y >= height || this.y <= 0) {
-        this.delta_y = -1 * this.delta_y;
+    if (this.y + this.r >= height || this.y - this.r <= 0) {
+        this.delta_y *= -1;
+
   }
 }
 

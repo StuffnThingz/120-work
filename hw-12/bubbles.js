@@ -19,14 +19,6 @@ class Ball {
   }
 }
 
-   // this.intersects = function(other) {
-   //   var d = dist(this.x, this.y, other.x, other.y);
-   //   if (d < this.r + other.r) {
-   //     return true;
-   //   } else {
-   //     return false;
-   //   }
-   // }
 
   move() {
     this.x += this.delta_x * this.scale_x;
