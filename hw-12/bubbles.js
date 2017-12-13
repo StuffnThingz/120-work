@@ -3,19 +3,20 @@ class Ball {
   this.x = random(0, width);
   this.y = random(0, height);
   this.r = random(40, 75);
-  this.delta_x = random(2, -2);
-  this.delta_y = random(2, -2);
-  this.scale_x = random(2, -2);
-  this.scale_y = random(2, -2);
+  this.delta_x = random(3, -3);
+  this.delta_y = random(3, -3);
+  this.scale_x = random(3, -3);
+  this.scale_y = random(3, -3);
   this.col =('rgb(255, 32, 10)');
 
-  this.intersects = function(other) {
-    var d = dist(this.x, this.y, other.x, other.y);
-    if (d < this.r + other.r) {
-      return true;
-    } else {
-      return false;
-    }
+}
+
+intersects(other) {
+  var d = dist(this.x, this.y, other.x, other.y);
+  if (d < this.r + other.r) {
+    return true;
+  } else {
+    return false;
   }
 }
 
