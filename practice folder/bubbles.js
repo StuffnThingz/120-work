@@ -1,11 +1,11 @@
-function Ball(x, y, r) {
+class Ball {
+  constructor(x, y) {
   this.x = x;
   this.y = y;
-  this.r = r;
-  this.delta_x = random(2, -2);
-  this.delta_y = random(2, -2);
-  this.scale_x = random(2, -2);
-  this.scale_y = random(2, -2);
+  this.r = random(10, 75);
+  this.delta_x = random(3, -3);
+  this.delta_y = random(3, -3);
+}
 
 this.display = function() {
   strokeWeight(2);
@@ -13,8 +13,9 @@ this.display = function() {
   ellipse(this.x, this.y, this.r * 2, this.r *2);
 }
 
-this.intersects = function(other) {
-  let d = dist(this.x, this.y, other.x, other.y);
+
+ this.intersects = function(other) {
+  var d = dist(this.x, this.y, other.x, other.y);
     if (d < this.r + other.r) {
       return true;
     } else {

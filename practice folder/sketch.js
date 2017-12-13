@@ -1,9 +1,9 @@
-var ball = [];
+let ball = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-    for (var i = 0; i < 20; i++) {
-      ball[i] = new Ball(random(width), random(height), random(10, 75));
+    for (let i = 0; i < 25; i++) {
+      ball[i] = new Ball(random(width), random(height));
     }
 }
 

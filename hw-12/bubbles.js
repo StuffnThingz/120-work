@@ -1,8 +1,8 @@
 class Ball {
   constructor() {
-  this.x = random(0, windowWidth);
-  this.y = random(0, windowHeight);
-  this.r = random(10, 75);
+  this.x = random(0, width);
+  this.y = random(0, height);
+  this.r = random(40, 75);
   this.delta_x = random(2, -2);
   this.delta_y = random(2, -2);
   this.scale_x = random(2, -2);
@@ -18,6 +18,7 @@ class Ball {
     }
   }
 }
+
 
 
   move() {
@@ -36,6 +37,6 @@ class Ball {
     stroke('rgb(0, 0, 0)');
     strokeWeight(3);
     fill(this.col);
-    ellipse(this.x, this.y, this.r * 2);
+    ellipse(this.x, this.y, this.r * 2, this.r * 2);
   }
 }
