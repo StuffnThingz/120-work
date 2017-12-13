@@ -20,7 +20,6 @@ class Ball {
 }
 
 
-
   move() {
     this.x += this.delta_x * this.scale_x;
     this.y += this.delta_y * this.scale_y;
